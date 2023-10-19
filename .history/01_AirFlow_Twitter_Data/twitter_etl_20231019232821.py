@@ -14,8 +14,7 @@ consumer_secret = os.getenv("Access Token Secret")
 
 # Twitter Authentication
 auth = tweepy.OAuthHandler(access_key, access_secret)
-auth.set_access_token(c
-                      , consumer_secret)
+auth.set_access_token(c800766681031114752-TJAlQfTSjNZ1W0bhj76tEspcMpqCYee, consumer_secret)
 
 # Create an API object
 api - tweepy.API(auth)

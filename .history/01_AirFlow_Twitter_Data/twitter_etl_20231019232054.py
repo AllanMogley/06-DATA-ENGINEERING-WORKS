@@ -9,13 +9,12 @@ from dotenv import load_dotenv
 access_key = os.getenv("API Key")
 access_secret = os.getenv("API Key Secret")
 # consumer = os.getenv("Bearer Token")
-consumer_key = os.getenv("Access Token")
+consumer_key = os.getenv("Access_Token")
 consumer_secret = os.getenv("Access Token Secret")
 
 # Twitter Authentication
 auth = tweepy.OAuthHandler(access_key, access_secret)
-auth.set_access_token(c
-                      , consumer_secret)
+auth.set_access_token(consumer_key, consumer_secret)
 
 # Create an API object
 api - tweepy.API(auth)
