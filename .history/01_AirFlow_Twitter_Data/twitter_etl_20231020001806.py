@@ -9,7 +9,7 @@ load_dotenv()
 
 
 # consumer = os.getenv("Bearer Token")
-# client = tweepy.Client(bearer_token='Bearer_Token')
+client = tweepy.Client(bearer_token='Bearer_Token')
 access_key = os.getenv("API_Key")
 access_secret = os.getenv("API_Key_Secret")
 consumer_key = os.getenv("Access_Token")

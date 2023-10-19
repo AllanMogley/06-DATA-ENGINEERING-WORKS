@@ -9,7 +9,7 @@ load_dotenv()
 
 
 # consumer = os.getenv("Bearer Token")
-# client = tweepy.Client(bearer_token='Bearer_Token')
+client = tweepy.Client(bearer_token='Bearer_Token')
 access_key = os.getenv("API_Key")
 access_secret = os.getenv("API_Key_Secret")
 consumer_key = os.getenv("Access_Token")
@@ -30,3 +30,12 @@ tweets = api.user_timeline(screen_name="@elonmusk",
 print(tweets)   
 
 
+# Replace with your own search query
+query = 'from:suhemparack -is:retweet'
+
+tweets = client.search_recent_tweets(query=query, tweet_fields=['context_annotations', 'created_at'], max_results=100)
+
+for tweet in tweets.data:
+    print(tweet.text)
+    if len(tweet.context_annotations) > 0:
+        print(tweet.context_annotations)

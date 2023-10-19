@@ -7,13 +7,13 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+print()
 
+access_key = os.getenv("API Key")
+access_secret = os.getenv("API Key Secret")
 # consumer = os.getenv("Bearer Token")
-# client = tweepy.Client(bearer_token='Bearer_Token')
-access_key = os.getenv("API_Key")
-access_secret = os.getenv("API_Key_Secret")
-consumer_key = os.getenv("Access_Token")
-consumer_secret = os.getenv("Access_Token_Secret")
+consumer_key = os.getenv("Access Token")
+consumer_secret = os.getenv("Access Token Secret")
 
 # Twitter Authentication
 auth = tweepy.OAuthHandler(access_key, access_secret)
@@ -28,5 +28,3 @@ tweets = api.user_timeline(screen_name="@elonmusk",
                            tweet_mode="extended")
 
 print(tweets)   
-
-
