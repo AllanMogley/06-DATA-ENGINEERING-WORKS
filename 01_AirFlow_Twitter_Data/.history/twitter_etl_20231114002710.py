@@ -21,5 +21,5 @@ client = tweepy.Client(
 )
 
 
-client.get_user(username = "Twitter Dev")
+lient.get_user(username = "Twitter Dev")
 # print(tweets)

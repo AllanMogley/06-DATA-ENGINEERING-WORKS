@@ -21,5 +21,11 @@ client = tweepy.Client(
 )
 
 
-client.get_user(username = "Twitter Dev")
+
+public_tweets = client.get_home_timeline()
+for tweet in public_tweets:
+    print(tweet.text)
+
 # print(tweets)
+
+# print(api)

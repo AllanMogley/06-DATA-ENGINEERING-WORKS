@@ -20,6 +20,17 @@ client = tweepy.Client(
     access_token_secret=consumer_secret
 )
 
+# Twitter Authentication
+auth = tweepy.OAuthHandler(access_key, access_secret)
+auth.set_access_token(consumer_key, consumer_secret)
 
-client.get_user(username = "Twitter Dev")
+# Create an API object
+# api = tweepy.API(auth)
+
+public_tweets = client.get_home_timeline()
+for tweet in public_tweets:
+    print(tweet.text)
+
 # print(tweets)
+
+# print(api)

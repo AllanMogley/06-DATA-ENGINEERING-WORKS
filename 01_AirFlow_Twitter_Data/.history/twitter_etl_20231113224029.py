@@ -13,13 +13,16 @@ access_secret = os.getenv("API_Key_Secret")
 consumer_key = os.getenv("Access_Token")
 consumer_secret = os.getenv("Access_Token_Secret")
 
-client = tweepy.Client(
-    consumer_key=access_key,
-    consumer_secret=access_secret,
-    access_token=consumer_key,
-    access_token_secret=consumer_secret
-)
 
+# Twitter Authentication
+auth = tweepy.OAuthHandler(access_key, access_secret)
+auth.set_access_token(consumer_key, consumer_secret)
 
-client.get_user(username = "Twitter Dev")
-# print(tweets)
+# Create an API object
+api = tweepy.API(auth)
+
+tweets = api.get_bookmarks()
+
+print(tweets)
+
+print(api)

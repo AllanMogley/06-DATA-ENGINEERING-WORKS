@@ -20,6 +20,15 @@ client = tweepy.Client(
     access_token_secret=consumer_secret
 )
 
+# Twitter Authentication
+auth = tweepy.OAuthHandler(access_key, access_secret)
+auth.set_access_token(consumer_key, consumer_secret)
 
-client.get_user(username = "Twitter Dev")
-# print(tweets)
+# Create an API object
+# api = tweepy.API(auth)
+
+tweets = client.search_recent_tweets(query = '#Churchi', max_results = 5)
+
+print(tweets)
+
+print(api)

@@ -20,6 +20,9 @@ client = tweepy.Client(
     access_token_secret=consumer_secret
 )
 
+public_tweets = client.get_home_timeline()
+for tweet in public_tweets:
+    print(tweet.text)
 
-client.get_user(username = "Twitter Dev")
+tweets = 
 # print(tweets)
