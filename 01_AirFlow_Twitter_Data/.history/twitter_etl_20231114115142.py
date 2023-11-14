@@ -24,5 +24,5 @@ client = tweepy.Client(
 client.get_user(username = "@elonmusk")
 # print(tweets)
 
-
-git
+tweepy.errors.Unauthorized: 401 Unauthorized
+Unauthorized

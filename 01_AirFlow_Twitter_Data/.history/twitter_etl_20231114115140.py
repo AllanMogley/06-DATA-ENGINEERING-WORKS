@@ -24,5 +24,3 @@ client = tweepy.Client(
 client.get_user(username = "@elonmusk")
 # print(tweets)
 
-
-git

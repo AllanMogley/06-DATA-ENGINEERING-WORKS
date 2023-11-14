@@ -21,8 +21,5 @@ client = tweepy.Client(
 )
 
 
-client.get_user(username = "@elonmusk")
+client.get_user(username = "")
 # print(tweets)
-
-
-git
